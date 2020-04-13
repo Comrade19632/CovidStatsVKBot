@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Comrade19632/CovidStatsVKBot/issues"
   },
-  "homepage": "https://github.com/Comrade19632/CovidStatsVKBot#readme"
+  "homepage": "https://github.com/Comrade19632/CovidStatsVKBot#readme",
+  "dependencies": {
+    "node-vk-bot-api": "^3.3.4"
+  }
 }
