@@ -12,10 +12,10 @@ bot.startPolling(()=>{
 bot.on((ctx) => {
     // ctx object holds the Update object from Telegram API
     // So you can use everything you see there
-
+    let country;
     // get the text message sent by user
-    const country = ctx.message.text;
-
+    if (ctx.message.text.indexOf("]") !== -1)  country = ctx.message.text.replace(/\s+/g, ' ').trim().slice(ctx.message.text.indexOf("]") + 1).replace(/\s+/g, ' ').trim();
+    else country = ctx.message.text.replace(/\s+/g, ' ').trim();
     // GET the data from Reddit API
     axios
         .get(`https://pomber.github.io/covid19/timeseries.json`)
